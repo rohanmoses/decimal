@@ -1,0 +1,101 @@
+#include<stdio.h>  
+void bina(int );
+void hex(int );
+void octa(int);
+void an(int ,int );
+void oor(int ,int );
+void no(int);
+void left(int n);
+void right(int n);
+int main(){
+int n,m;
+
+
+printf("Enter two number to convert: ");  
+scanf("%d",&n);
+scanf("%d",&m);
+bina(n);
+bina(m);
+hex(n);
+hex(m);
+octa(n);
+octa(m);
+an(n,m);
+oor(n,m);
+no(n);
+no(m);
+left(n);
+left(m);
+right(n);
+right(m);
+return 0;
+}
+
+void bina(int n)
+{   int a[10],i;
+    for( i=0;n>0;i++)  
+{  
+    a[i]=n%2;  
+    n=n/2;  
+}  
+    printf("\nBinary of Given Number is=");  
+    for(i=i-1;i>=0;i--)  
+{  
+    printf("%d",a[i]);  
+}
+}
+
+void hex(int n)
+{
+    printf("\n");
+    printf("Hexadecimal number is: %X\n", n);
+}
+
+
+void octa(int n)
+{
+    printf("\n Octal Number of a Given Number =  %o", n);
+
+}
+
+void an(int n,int m)
+{
+    int c=0;
+    c=n&m;
+    printf("\nbitwise AND:%d",c);
+}
+
+
+void oor(int n,int m)
+{
+    int c=0;
+    c=n | m;
+    printf("\nbitwise OR:%d",c);   
+}
+
+void no(int n)
+{
+    int c=0;
+    c=~n;
+    printf("\nbitwise NOT:%d",c);   
+}
+
+void left(int n)
+{
+    int k,c=0;
+    printf("\nenter how much to be left shifted");
+    scanf("%d",&k);
+    c=n<<k;
+    printf("\nbitwise left shift :%d",c);   
+    
+}
+
+void right(int n)
+{
+    int k,c=0;
+    printf("\nenter how much to be right shifted");
+    scanf("%d",&k);
+    c=n>>k;
+    printf("\nbitwise left shift :%d",c);   
+    
+}
